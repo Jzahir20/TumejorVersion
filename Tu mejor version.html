@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu mejor Version</title>
+    <title>Tu mejor Versión</title>
     <style>
         * {
             margin: 0;
@@ -20,32 +20,48 @@
         nav {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 15px 0;
+            padding: 10px 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #14d402;
         }
 
         .menu-container {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
-            justify-content: center;
             align-items: center;
         }
 
         .menu {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 20px;
         }
 
         .menu li a {
             text-decoration: none;
             color: #333;
             font-weight: 600;
-            padding: 12px 24px;
+            padding: 10px 18px;
             border-radius: 25px;
             transition: all 0.3s ease;
             position: relative;
@@ -75,20 +91,67 @@
         }
 
         .content {
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
             color: white;
         }
 
         .content h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #c8ffc2;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding-top: 10px;
+            }
+
+            .logo {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .content h1 {
+                font-size: 2.4rem;
+            }
+
+            .content h2 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- NAV CON LOGO -->
     <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo Tu Mejor Versión">
+            <span>Tu Mejor Versión</span>
+        </div>
         <div class="menu-container">
             <ul class="menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -99,11 +162,13 @@
             </ul>
         </div>
     </nav>
-    
-    <div class="content">
-        <h1>Tu mejor Version</h1>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="content" id="inicio">
+        <h1>Tu Mejor Versión</h1>
         <h2>¡Un gran lugar para ti!</h2>
-        <p> Con nuestras asesorías y nuestra ayuda, lograrás conseguir tus objetivos en cuanto a salud y condición física.</p>
+        <p>Con nuestras asesorías y nuestra ayuda, lograrás conseguir tus objetivos en cuanto a salud y condición física.</p>
     </div>
+
 </body>
 </html>
