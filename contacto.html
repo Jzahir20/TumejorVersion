@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impulsa Educa - Formulario de Contacto</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+    }
+
+    header {
+      background-color: #424242;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn-contacto {
+      background-color: #14d402;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+
+    .formulario-container {
+      display: none;
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-top: 5px solid #14d402;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+
+    .formulario-container h2 {
+      color: #424242;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #424242;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .checkbox-container input {
+      margin-right: 10px;
+    }
+
+    .btn-enviar {
+      background-color: #14d402;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Impulsa Educa</h1>
+  <button class="btn-contacto" onclick="mostrarFormulario()">Contacto</button>
+</header>
+
+<div class="formulario-container" id="formulario">
+  <h2>Te llamamos desde Impulsa Educa</h2>
+  <p>Déjanos tus datos y pronto un asesor de <strong>Impulsa Educa</strong> te contactará para que puedas cumplir tus metas.</p>
+
+  <form>
+    <label for="nombre">Nombre y Apellidos</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Correo Electrónico</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="ciudad" required>
+
+    <label for="programa">Selecciona el programa</label>
+    <select id="programa" name="programa">
+      <option value="">-- Selecciona --</option>
+      <option value="icfes">Preparación ICFES</option>
+      <option value="preuniversitario">Preuniversitario</option>
+      <option value="otros">Otros</option>
+    </select>
+
+    <label>Modalidad</label>
+    <label><input type="radio" name="modalidad" value="virtual" required> Virtual</label>
+    <label><input type="radio" name="modalidad" value="presencial"> Presencial</label>
+
+    <div class="checkbox-container">
+      <input type="checkbox" id="politicas" required>
+      <label for="politicas">Acepto las políticas de tratamiento de datos</label>
+    </div>
+
+    <button type="submit" class="btn-enviar">ENVIAR</button>
+  </form>
+</div>
+
+<script>
+  function mostrarFormulario() {
+    const form = document.getElementById("formulario");
+    form.style.display = form.style.display === "none" || form.style.display === "" ? "block" : "none";
+  }
+</script>
+
+</body>
+</html>
