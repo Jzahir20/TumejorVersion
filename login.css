@@ -1,0 +1,72 @@
+/* login.css */
+
+body {
+    /* Mantén el estilo del cuerpo del estinde.css si lo deseas para el fondo */
+    /* background: linear-gradient(135deg, #424242 0%, #14d402 100%); */
+    display: flex; /* Flexbox para centrar el contenido del login */
+    flex-direction: column; /* Apila la navegación y el contenido */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh; /* Ocupa al menos el 100% de la altura del viewport */
+}
+
+/* El wrapper para el contenido de login, para centrarlo y darle un fondo */
+.login-wrapper {
+    flex-grow: 1; /* Permite que este div ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido dentro de este wrapper */
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-header {
+    text-align: center;
+    color: white; /* O un color que contraste con tu fondo */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    font-size: 1.1rem;
+    color: #c8ffc2;
+}
+
+
+.login-form-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo semitransparente para el formulario */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Ocupa todo el ancho disponible del wrapper */
+    max-width: 500px; /* Ancho máximo para el formulario */
+    min-height: 450px; /* Asegura un tamaño mínimo para el embed */
+    display: flex; /* Añade flexbox para que el contenido de visme se centre si es necesario */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+/* Si el iframe de Visme es demasiado grande, puedes intentar estilizarlo directamente */
+/* Sin embargo, Visme a menudo gestiona su propio tamaño, y forzarlo puede causar problemas */
+/* Si el formulario se ve cortado, ajusta data-min-height o data-full-page en el HTML */
+
+/* Consideraciones responsive para el login */
+@media (max-width: 768px) {
+    .login-header h1 {
+        font-size: 2rem;
+    }
+    .login-header p {
+        font-size: 1rem;
+    }
+    .login-form-container {
+        padding: 20px;
+        max-width: 95%; /* Un poco más de margen en móviles */
+    }
+}
